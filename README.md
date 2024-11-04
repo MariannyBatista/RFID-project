@@ -34,4 +34,4 @@ Hasta el momento, se ha completado la implementación de la pantalla LCD, la bis
 ![Avances](avances.jpeg)
 
 ## Avances en estructura de cableado
-![Avances cableado](rfid simulador.jpeg)
+![cableado](rfidsimulador.jpeg)
