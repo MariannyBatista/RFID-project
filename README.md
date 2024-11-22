@@ -37,7 +37,7 @@ En esta sección, se detallan los componentes seleccionados para la construcció
 
 Hasta el momento, se ha completado la implementación de la pantalla LCD, la bisagra y el módulo RFID, que ha sido soldado con pines para asegurar su funcionalidad. El proyecto aún se encuentra en desarrollo, y los próximos avances se abordarán en clase.
 
-![Avances](image/avances.jpeg)
+![Avances](image/circuit_image.png)
 
 ## Avances en estructura de cableado
 
