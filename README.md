@@ -6,16 +6,16 @@ Proyecto desarrollado para la materia de Internet de las Cosas.
 
 ### Integrantes
 
-- Marianny Batista
-- Krishna Pavié
+- Marianny Batista  
+- Krishna Pavié  
 
 ### Docente
 
-Ignacio Pérez
+Ignacio Pérez  
 
 ### Asignatura
 
-IOT
+IOT  
 
 ## Elementos de los artefactos del circuito
 
@@ -31,6 +31,7 @@ En esta sección, se detallan los componentes seleccionados para la construcció
 - **Jumpers**: Cables de conexión utilizados para establecer las conexiones necesarias entre los componentes en el circuito.
 - **Placa sensora RFID**: Dispositivo que lee los identificadores de los llaveros RFID y transmite la información al Arduino.
 - **Bisagra**: Componente mecánico que facilita la apertura y cierre de la estructura controlada por la cerradura.
+- **Módulo WiFi ESP8266MOD**: Permite enviar mensajes vía WhatsApp para notificar el acceso, mejorando la funcionalidad del sistema con notificaciones en tiempo real.
 
 ## Avances en estructura física
 
