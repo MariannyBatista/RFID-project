@@ -7,7 +7,6 @@ Proyecto desarrollado para la materia de Internet de las Cosas.
 ### Integrantes
 
 - Marianny Batista
-- Rodrigo Améstica
 - Krishna Pavié
 
 ### Docente
