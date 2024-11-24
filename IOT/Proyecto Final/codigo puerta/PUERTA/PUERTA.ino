@@ -2,19 +2,25 @@
 #include <MFRC522.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <SoftwareSerial.h>
 
 // Pines RFID
-#define SS_PIN 10//SDA pin
-#define RST_PIN 9//Reset Pin
-#define MOSI_PIN 11//Mosi Pin
-#define MISO_PIN 12// Miso Pin
-#define SCK_PIN 13 //Sck/Scl Pin
+#define SS_PIN 10//SDA pin(rojo)
+#define RST_PIN 9//Reset Pin(morado-café)
+#define MOSI_PIN 11//Mosi Pin(amarillo)
+#define MISO_PIN 12// Miso Pin(verde)
+#define SCK_PIN 13 //Sck/Scl Pin(naranjo)
+
+//Pines de comunicación
+#define RX 2
+#define TX 3
+SoftwareSerial espSerial(RX, TX);
 
 // Pines de salida
 #define LED_G 5      // LED verde
 #define LED_R 4      // LED rojo
-#define RELAY 2      // Relay para la cerradura
-#define BUZZER 3     // Buzzer
+#define RELAY 7      // Relay para la cerradura
+#define BUZZER 6     // Buzzer
 
 // Constantes
 #define ACCESS_DELAY 2000
@@ -47,6 +53,7 @@ void setup() {
   Serial.begin(9600);
   SPI.begin();
   mfrc522.PCD_Init();
+  espSerial.begin(9600); // Comunicación con el ESP8266
   
   // Inicialización de pines
   pinMode(LED_G, OUTPUT);
@@ -109,6 +116,7 @@ bool esAccesoPermitido(String uid) {
 
 void accesoAutorizado() {
   Serial.println("Acceso autorizado");
+  espSerial.println("Autorizado");
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Acceso permitido");
@@ -124,6 +132,7 @@ void accesoAutorizado() {
 
 void accesoDenegado() {
   Serial.println("Acceso denegado");
+  espSerial.println("Denegado");
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Acceso denegado");
